@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Mind</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome برای آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- فونت فارسی Vazir -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+
+    <!-- استایل‌های سفارشی -->
+    <style>
+        * {
+            font-family: Vazir, sans-serif;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7c3aed;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            --danger-color: #ef4444;
+            --success-color: #10b981;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+        .section-title {
+            color: var(--dark-color);
+            border-right: 5px solid var(--primary-color);
+            padding-right: 15px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .pros-card {
+            border-top: 4px solid var(--success-color);
+        }
+
+        .cons-card {
+            border-top: 4px solid var(--danger-color);
+        }
+
+        .ai-works-card {
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .poll-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .btn-poll {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+
+
+/* پایه – دسکتاپ */
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* تبلت */
+@media (max-width: 1024px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- نوار ناوبری -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+	<div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-robot text-primary"></i> ذهن آینده
+            </a>
+
+            <!-- دکمه منوی همبرگری برای موبایل -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#advantages">مزایا</a>
+                    </li>
+					
+                    <li class="nav-item">
+                        <a class="nav-link" href="#disadvantages">معایب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">کارهای شگفت‌انگیز</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#poll">نظرسنجی</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- بخش اصلی (Hero) -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">ذهن آینده | نگاه هوشمند به آینده</h1>
+                    <p class="lead">کشف فرصت‌ها، چالش‌ها و شگفتی‌های هوش مصنوعی در دنیای فردا</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fas fa-brain fa-10x text-light opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- بخش مزایا -->
+<section id="advantages" class="py-5">
+    <div class="container">
+        <h2 class="section-title">مزایا و فرصت‌های آینده هوش مصنوعی</h2>
+        <div class="row">
+            <!-- کارت 1 -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a href="p.html" style="text-decoration:none;color:inherit">
+                    <div class="card pros-card p-3 h-100">
+                        <div class="card-icon text-center">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4 class="card-title">پزشکی دقیق</h4>
+                        <p class="card-text">
+                            تشخیص سریع‌تر بیماری‌ها، جراحی با ربات‌های دقیق...
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- کارت 2 -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a href="m.html" style="text-decoration:none;color:inherit">
+                    <div class="card pros-card p-3 h-100">
+                        <div class="card-icon text-center">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="card-title">محیط‌زیست</h4>
+                        <p class="card-text">مدیریت هوشمند انرژی، پیش‌بینی بلایای طبیعی و مبارزه با تغییرات اقلیمی.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- کارت 3 -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a href="a.html" style="text-decoration:none;color:inherit">
+                    <div class="card pros-card p-3 h-100">
+                        <div class="card-icon text-center">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="card-title">آموزش شخصی</h4>
+                        <p class="card-text">معلم هوش مصنوعی برای هر دانش‌آموز با روش تدریس متناسب با سرعت یادگیری.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- کارت 4 -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <a href="e.html" style="text-decoration:none;color:inherit">
+                    <div class="card pros-card p-3 h-100">
+                        <div class="card-icon text-center">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="card-title">اکتشافات فضایی</h4>
+                        <p class="card-text">کشف سیارات جدید، هدایت خودکار فضاپیماها و تحلیل داده‌های نجومی.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- بخش معایب -->
+    <section id="disadvantages" class="py-5 bg-light">
+    <div class="container">
+    <h2 class="section-title">چالش‌ها و خطرات هوش مصنوعی</h2>
+        <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card cons-card p-3">
+        <div class="card-icon text-center">
+        <i class="fas fa-user-secret"></i>
+        </div>
+		<a href="kh.html" style="text-decoration:none;color:inherit">
+        <h4 class="card-title">حریم خصوصی</h4>
+        <p class="card-text">شنود هوشمند، تشخیص چهره و نظارت گسترده بر زندگی افراد.</p></a>
+        </div>
+        </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card cons-card p-3">
+            <div class="card-icon text-center">
+            <i class="fas fa-briefcase"></i>
+            </div>
+			<a href="b.html" style="text-decoration:none;color:inherit">
+            <h4 class="card-title">بیکاری</h4>
+            <p class="card-text">اتوماسیون مشاغل سنتی و نیاز به مهارت‌های جدید برای کار در آینده.</p></a>
+            </div>
+            </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card cons-card p-3">
+                <div class="card-icon text-center">
+                <i class="fas fa-balance-scale"></i>
+                </div>
+				<a href="t.html" style="text-decoration:none;color:inherit">
+                <h4 class="card-title">تبعیض الگوریتمی</h4>
+                <p class="card-text">تصمیم‌گیری ناعادلانه به دلیل داده‌های biased یا برنامه‌نویسی نامناسب.</p></a>
+                </div>
+                </div>
+					<div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card cons-card p-3">
+                    <div class="card-icon text-center">
+                    <i class="fas fa-shield-alt"></i>
+                    </div>
+					<a href="s.html" style="text-decoration:none;color:inherit">
+                    <h4 class="card-title">سلاح خودمختار</h4>
+                    <p class="card-text">ربات‌های کشنده بدون کنترل انسان و جنگ‌های هوش مصنوعی.</p></a>
+                    </div>
+					</div>
+					
+
+    </div>
+    </div>
+    </section>
+
+
+    <!-- بخش کارهای شگفت‌انگیز -->
+    <section id="works" class="py-5">
+    <div class="container">
+	<a href="KA.html" style="text-decoration:none;color:inherit">
+    <h2 class="section-title">کارهای شگفت‌انگیز هوش مصنوعی امروز</h2>
+    <div class="row">
+    <div class="col-md-4 mb-4">
+		<div class="card ai-works-card p-3 h-100">
+		<div class="card-icon text-center">
+		<i class="fas fa-palette"></i>
+		</div>
+        <h4 class="card-title">کارهای شگفت انگیزه هوش مصنوعی در این چندسال اخیر</h4>
+        <div class="mt-3">
+        </div>
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!-- بخش نظرسنجی -->
+    <section id="poll" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">نظرسنجی: آینده هوش مصنوعی از نگاه شما</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="poll-section">
+                        <div class="mb-4">
+                            <h5>به نظر شما تا ۱۰ سال آینده، هوش مصنوعی بیشتر چه تأثیری روی زندگی ما خواهد داشت؟</h5>
+                            <div class="btn-group-vertical w-100 mt-3" role="group">
+                                <button class="btn btn-outline-primary btn-poll" onclick="vote(1)">
+                                    <i class="fas fa-thumbs-up"></i> تأثیر مثبت و مفید خواهد داشت
+                                </button>
+                                <button class="btn btn-outline-danger btn-poll" onclick="vote(2)">
+                                    <i class="fas fa-thumbs-down"></i> تأثیر منفی و خطرناک خواهد داشت
+                                </button>
+                                <button class="btn btn-outline-secondary btn-poll" onclick="vote(3)">
+                                    <i class="fas fa-balance-scale"></i> ترکیبی از خوب و بد خواهد بود
+                                </button>
+                                <button class="btn btn-outline-info btn-poll" onclick="vote(4)">
+                                    <i class="fas fa-question-circle"></i> مطمئن نیستم
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="pollResult" class="mt-4" style="display:none;">
+                            <h5>نتیجه نظرسنجی:</h5>
+                            <div class="progress mt-2" style="height: 25px;">
+                                <div id="pollBar" class="progress-bar bg-success" style="width: 0%">0%</div>
+                            </div>
+                            <p id="pollMessage" class="mt-2"></p>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5>آیا حاضرید یک دستیار هوش مصنوعی شخصی داشته باشید؟</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="assistant" id="assistantYes">
+                                <label class="form-check-label" for="assistantYes">
+                                    بله، حتما
+									</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="assistant" id="assistantNo">
+                                <label class="form-check-label" for="assistantNo">
+                                    نه، ترجیح می‌دهم تعامل انسانی داشته باشم
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-robot"></i> آینده هوش مصنوعی</h4>
+                    <p>این وبسایت برای مسابقات مدرسه طراحی شده و هدف آن آشنایی با آینده هوش مصنوعی است.</p>
+                </div>
+
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- اسکریپت‌های سفارشی -->
+    <script>
+        // اسکرول نرم برای لینک‌های منو
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // تابع نظرسنجی ساده
+        function vote(option) {
+            const messages = [
+                "",
+                "شما رأی مثبت دادید! خوشبینان معتقدند AI زندگی بهتری برای انسان می‌سازد.",
+                "شما رأی منفی دادید! واقع‌بینی مهم است ولی نباید از پیشرفت ترسید.",
+                "شما رأی متعادل دادید! بسیاری از کارشناسان همین نظر را دارند.",
+                "شما مطمئن نیستید! طبیعی است، آینده همیشه پر از ابهام است."
+            ];
+
+            // نمایش نتیجه
+            document.getElementById('pollResult').style.display = 'block';
+            document.getElementById('pollMessage').textContent = messages[option];
+
+            // شبیه‌سازی درصد (در پروژه واقعی این مقدار از سرور می‌آید)
+            const percentages = [0, 65, 20, 10, 5];
+            document.getElementById('pollBar').style.width = percentages[option] + '%';
+            document.getElementById('pollBar').textContent = percentages[option] + '%';
+
+            // تغییر رنگ نوار براساس انتخاب
+            const colors = ['', 'success', 'danger', 'warning', 'info'];
+            document.getElementById('pollBar').className = 'progress-bar bg-' + colors[option];
+        }
+
+        // نمایش پیام خوش‌آمدگویی در کنسول
+        console.log("خوش آمدید! این وبسایت درباره آینده هوش مصنوعی است.");
+    </script>
+</body>
+</html>
